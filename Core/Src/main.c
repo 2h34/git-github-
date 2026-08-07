@@ -128,12 +128,12 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    current_led = 2U; /* 练习点：改成 2U，观察从哪颗 LED 开始 */
+    current_led = 1U; /* 练习点：改成 2U，观察从哪颗 LED 开始 */
 
     /* while 循环：条件成立就反复执行 {} 里的代码 */
     while (current_led <= led_count)
     {
-      blink_led(current_led, blink_times, delay_ms);
+      blink_led(current_led, current_led, delay_ms);
       current_led++; /* 等价于 current_led = current_led + 1 */
     }
 
